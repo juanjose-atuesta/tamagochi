@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite que la página se adapte a diferentes tamaños de pantalla -->
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        /* Estilos generales del cuerpo */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Hace que la página ocupe toda la altura de la pantalla */
+            background: linear-gradient(135deg, #FFC1E3, #AEE3FF); /* Fondo con degradado de rosa a azul */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        
+        /* Contenedor principal */
+        .container {
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+            padding: 20px;
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de profundidad */
+        }
+        
+        /* Estilo del título */
+        h1 {
+            color: #E91E63; /* Color rosa fuerte */
+            font-size: 24px; /* Tamaño de la fuente */
+            margin-bottom: 20xp;
+            
+        }
+        
+        /* Estilo de la imagen */
+        img {
+            width: 400px; /* Ancho de la imagen */
+            height: auto; /* Ajuste automático de la altura */
+            margin: 10px 0; /* Espaciado superior e inferior */
+        }
+        
+        /* Estilo del botón */
+        .btn {
+            background: #FF6BA3; /* Color de fondo del botón */
+            color: white; /* Color del texto */
+            border: none; /* Sin borde */
+            padding: 10px 20px; /* Espaciado interno */
+            font-size: 18px; /* Tamaño del texto */
+            border-radius: 10px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+            transition: 0.3s; /* Transición suave en los cambios */
+        }
+        
+        /* Cambio de color al pasar el mouse sobre el botón */
+        .btn:hover {
+            background: #E91E63; /* Color más oscuro al pasar el cursor */
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- Contenedor principal -->
+        <h1 id = "titulo">¿Mi Ratoncita quiere darme el honor de ser su San Valentin por segunda vez consecutiva? 💖</h1>
+        <img id = "imagen" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWYydXV2OHNvODdxZHVha3RhN2M2Nmw0eDU0eHpvbzBkejdzNXkydiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/c76IJLufpNwSULPk77/giphy.gif" alt="Panda GIF"> <!-- Imagen GIF -->
+        <br>
+        <button class="btn" onclick="mostrarMensaje()">Sí 💕</button> <!-- Botón con función JavaScript -->
+        <button id="boton" class="btn" onclick="mostrarOtroMensaje()">No 😔</button> <!-- Nuevo botón -->
+    </div>
+
+    <script>
+        // Función que muestra un mensaje cuando se hace clic en el botón
+        function mostrarMensaje() {
+            document.getElementById("titulo").innerText = "Sabía que dirias que si jejejeje, te espero este 14 de febrero...te amoo";
+            document.getElementById("imagen").src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGpxNjZ2azFoeGVkYWZtb3A0NW00eTB1cGJ5bzZyM2xtMmZ3M2RxcSZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/MDJ9IbxxvDUQM/giphy.gif";
+            // cambiar proporciones de la imagen
+            document.getElementById("imagen").style.width = "680px";
+            document.getElementById("imagen").style.height = "auto";
+        }
+        function mostrarOtroMensaje() {
+            boton = document.getElementById("boton");
+            boton.remove();
+        }
+    </script>
+</body>
+</html>
